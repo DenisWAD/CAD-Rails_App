@@ -1,0 +1,33 @@
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - main
+      - deploy:
+          filters:
+            branches:
+              only:
+                - main
+          requires:
+            - build
+
+orbs:
+  ruby: circleci/ruby@1.4.0
+
+jobs:
+  build:
+    working_directory: ~/CAD-Project
+    steps:
+      - checkout
+      - run: 
+          name: hello
+          command: echo hello
+  deploy:
+    steps:
+      - run:
+          name: worl
+          command: echo world
