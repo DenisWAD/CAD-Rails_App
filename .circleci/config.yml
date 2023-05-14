@@ -29,5 +29,5 @@ jobs:
   deploy:
     steps:
       - run:
-          name: worl
+          name: world
           command: echo world
