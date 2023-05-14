@@ -1,3 +1,4 @@
+version: 2.1
 workflows:
   version: 2
   build:
@@ -17,7 +18,7 @@ workflows:
 
 
 orbs:
-  ruby: circleci/ruby@1.4.0
+  ruby: circleci/ruby@2.0.1
 
 jobs:
   build:
